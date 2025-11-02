@@ -1,0 +1,29 @@
+⥀ §sum_safe α β ※ Định nghĩa hàm §sum_safe
+  ⍟ ≔ 0 
+  
+  ↜ ? α ≺ 0 ※ IF: Kiểm tra điều kiện α < 0
+    ⇒ λ! "Tham_số_âm" ※ TRUE: Phát sinh lỗi
+  ⇏ ※ ELSE: Ngược lại
+    ⍟ ≔ α ⊞ β ※ Tính tổng: ⍟ = α + β
+  ↯ ※ Kết thúc IF
+  
+  ⎋ ⍟ ※ Trả về biến kết quả ⍟
+⥁ ※ Kết thúc hàm
+
+* "Bắt_đầu_Chương_Trình"
+
+⛌ ※ TRY: Bắt đầu khối bảo vệ
+  ⍡ ≔ 5 
+  
+  ⍟_res ≔ §sum_safe ⍡ 10 ※ Gọi hàm (5 + 10)
+  * ⍟_res ※ In kết quả 15
+  
+  §sum_safe -1 10 ※ Gọi hàm với tham số âm -> Gây ra lỗi THROW
+⎁ ε ※ CATCH: Bắt lỗi và lưu vào biến ε
+  * "Lỗi_Bị_Bắt:"
+  * ε 
+⎎ ※ FINALLY: Khối luôn thực thi
+  * "Kết_thúc_Xử_Lý_Lỗi"
+⍰ 
+
+* "Kết_thúc_Chương_Trình"

@@ -1,0 +1,22 @@
+# --- Bao gồm các tệp cần thiết (Metadata) ---
+
+# Đảm bảo README.md, LICENSE được bao gồm trong sdist
+
+include README.md
+include LICENSE
+
+# --- Loại trừ các tệp và thư mục không cần thiết ---
+
+# Loại trừ các file/thư mục build và cache
+
+exclude *.pyc
+exclude *.egg-info
+exclude .tox
+exclude .vscode
+exclude build
+exclude dist
+
+# Loại trừ các thư mục quản lý code (nếu có)
+
+exclude .git
+exclude .github
